@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreTickerApp.Android", "ScoreTickerApp\ScoreTickerApp.Android\ScoreTickerApp.Android.csproj", "{F2D80721-E986-44CA-8EAE-24B552A71B03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreTickerApp", "ScoreTickerApp\ScoreTickerApp\ScoreTickerApp.csproj", "{BEE98407-2CD1-4E9E-98F7-655E48976FAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2D80721-E986-44CA-8EAE-24B552A71B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D80721-E986-44CA-8EAE-24B552A71B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D80721-E986-44CA-8EAE-24B552A71B03}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F2D80721-E986-44CA-8EAE-24B552A71B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D80721-E986-44CA-8EAE-24B552A71B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2D80721-E986-44CA-8EAE-24B552A71B03}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BEE98407-2CD1-4E9E-98F7-655E48976FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE98407-2CD1-4E9E-98F7-655E48976FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE98407-2CD1-4E9E-98F7-655E48976FAE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BEE98407-2CD1-4E9E-98F7-655E48976FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE98407-2CD1-4E9E-98F7-655E48976FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE98407-2CD1-4E9E-98F7-655E48976FAE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE5A524E-66F0-4207-92DD-E10703BCBD43}
+	EndGlobalSection
+EndGlobal
