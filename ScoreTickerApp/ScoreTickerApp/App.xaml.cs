@@ -1,4 +1,5 @@
 ﻿using System;
+using ScoreTickerApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,6 +10,7 @@ namespace ScoreTickerApp
         public App()
         {
             InitializeComponent();
+            MainPage = new ScoreTickerView();
         }
 
         protected override void OnStart()
