@@ -1,0 +1,2 @@
+# ScoreTickerApp
+xamarin carousel example
