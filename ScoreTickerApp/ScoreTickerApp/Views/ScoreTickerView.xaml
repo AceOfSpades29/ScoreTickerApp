@@ -10,10 +10,7 @@
         <vm:ScoreTickerViewModel></vm:ScoreTickerViewModel>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <CarouselView x:Name="ticker" ItemsSource="{Binding Scores}">
-            <CarouselView.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding StopScrollCommand}"></TapGestureRecognizer>
-            </CarouselView.GestureRecognizers>
+        <CarouselView x:Name="Ticker" ItemsSource="{Binding Scores}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <Grid>

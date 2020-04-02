@@ -22,26 +22,29 @@ namespace ScoreTickerApp.Views
             var scores = BindingContext as ScoreTickerViewModel;
             MessagingCenter.Subscribe<ScoreTickerViewModel>(this, "Stop Scroll", IsScrolling);
             _autoScrollCancellationToken = new CancellationTokenSource();
-            AutoScroll(scores.Scores.ToList(), 0);
+            AutoScroll(scores.Scores.ToList());
             
         }
 
-        public async void AutoScroll(List<Score> scores, int count)
+        public async void AutoScroll(List<Score> scores)
         {
             await Task.Delay(TimeSpan.FromSeconds(4), _autoScrollCancellationToken.Token);
-            if (count == scores.Count()) count = 0;
-            count = ScrollToNextItem(scores.ElementAt(count), count);
-            AutoScroll(scores, count);
+            var index = scores.IndexOf(Ticker.CurrentItem as Score);
+            if (index <= 0) index = 1;
+            else if (index == (scores.Count() - 1)) index = 0;
+            else index += 1;
+            ScrollToNextItem(scores.ElementAt(index));
+            AutoScroll(scores);
             
         }
 
-        private int ScrollToNextItem(object scoreObj, int index)
+        private int ScrollToNextItem(object scoreObj)
         {
             
             var score = scoreObj as Score;
             if (score == null) return 0;
-            ticker.ScrollTo(score);
-            return index + 1;
+            Ticker.ScrollTo(score);
+            return 1;
         }
 
         public void IsScrolling(ScoreTickerViewModel scoreTickerViewModel)
