@@ -20,7 +20,6 @@ namespace ScoreTickerApp.Views
         {
             InitializeComponent();
             var scores = BindingContext as ScoreTickerViewModel;
-            MessagingCenter.Subscribe<ScoreTickerViewModel>(this, "Stop Scroll", IsScrolling);
             _autoScrollCancellationToken = new CancellationTokenSource();
             AutoScroll(scores.Scores.ToList());
             
@@ -44,12 +43,6 @@ namespace ScoreTickerApp.Views
             var score = scoreObj as Score;
             if (score == null) return;
             Ticker.ScrollTo(score);
-        }
-
-        public void IsScrolling(ScoreTickerViewModel scoreTickerViewModel)
-        {
-            Debug.WriteLine("tap event called");
-            _autoScrollCancellationToken.Cancel();
         }
     }
 }

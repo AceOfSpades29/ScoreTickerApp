@@ -14,7 +14,6 @@ namespace ScoreTickerApp.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ICommand StopScrollCommand { get; set; }
         public ObservableCollection<Score> Scores { get; set; }
 
         public ScoreTickerViewModel()
@@ -44,13 +43,9 @@ namespace ScoreTickerApp.ViewModels
                 }
                 });
 
-                StopScrollCommand = new Command(Send, ()=>true);
         }
 
-        private void Send()
-        {
-            MessagingCenter.Send(this, "Stop Scroll");
-        }
+     
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
