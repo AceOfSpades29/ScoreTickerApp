@@ -10,23 +10,33 @@
         <vm:ScoreTickerViewModel></vm:ScoreTickerViewModel>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <CarouselView x:Name="Ticker" ItemsSource="{Binding Scores}">
+        <CarouselView x:Name="Ticker" ItemsSource="{Binding Scores}" PeekAreaInsets="20">
+            <CarouselView.ItemsLayout >
+                <LinearItemsLayout Orientation="Horizontal"></LinearItemsLayout>
+            </CarouselView.ItemsLayout>
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="250"></ColumnDefinition>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                            <RowDefinition Height="Auto"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Label Grid.Column="0" Grid.Row="0" Text="{Binding TeamA}"></Label>
-                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding TeamAScore}"></Label>
-                        <Label Grid.Column="0" Grid.Row="1" Text="{Binding TeamB}"></Label>
-                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding TeamBScore}"></Label>
-                    </Grid>
+                    <StackLayout>
+                        <Frame BorderColor="DarkGray"
+                                   CornerRadius="5"
+                                   Margin="0,0,5,10"
+                                   VerticalOptions="Start">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition  Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" Text="{Binding TeamA}"></Label>
+                                <Label Grid.Column="1" Grid.Row="0" Text="{Binding TeamAScore}"></Label>
+                                <Label Grid.Column="0" Grid.Row="1" Text="{Binding TeamB}"></Label>
+                                <Label Grid.Column="1"  Grid.Row="1" Text="{Binding TeamBScore}"></Label>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
