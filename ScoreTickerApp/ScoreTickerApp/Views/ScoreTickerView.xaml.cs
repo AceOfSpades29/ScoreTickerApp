@@ -38,13 +38,12 @@ namespace ScoreTickerApp.Views
             
         }
 
-        private int ScrollToNextItem(object scoreObj)
+        private void ScrollToNextItem(object scoreObj)
         {
             
             var score = scoreObj as Score;
-            if (score == null) return 0;
+            if (score == null) return;
             Ticker.ScrollTo(score);
-            return 1;
         }
 
         public void IsScrolling(ScoreTickerViewModel scoreTickerViewModel)
